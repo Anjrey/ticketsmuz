@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ pagetitle }}</title>
+</head>
+<body>
+<h3>{{ amount }} registered band.</h3>
+{% for band in bands %}
+<span>&#183;</span>{{ band.name }} ({{ band.genre }}) <a href="{% url 'band-page' band.id %}">View</a>
+{% endfor %}
+</body>
+</html>
